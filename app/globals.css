@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Luvwish.in hot magenta-pink brand colors */
+  --color-brand-primary: #E8007C;
+  --color-brand-light: #FFF0F7;
+  --color-brand-soft: #FFB3D9;
+  --color-brand-dark: #B8005E;
+  --color-brand-accent: #FF4DAE;
+
+  /* Warm cream neutrals */
+  --color-neutral-50: #FAF7F2;
+  --color-neutral-100: #F5F0EB;
+  --color-neutral-200: #EAE2DA;
+  --color-neutral-300: #D4C8BE;
+  --color-neutral-500: #8C7B72;
+  --color-neutral-700: #4A3228;
+  --color-neutral-900: #1A0A06;
+
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}
+
+/* ── Page load animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.anim-fade-up  { animation: fadeUp 0.55s ease-out both; }
+.anim-fade-in  { animation: fadeIn 0.4s ease-out both; }
+.anim-delay-1  { animation-delay: 80ms; }
+.anim-delay-2  { animation-delay: 160ms; }
+.anim-delay-3  { animation-delay: 240ms; }
+.anim-delay-4  { animation-delay: 320ms; }
+.anim-delay-5  { animation-delay: 400ms; }
+.anim-delay-6  { animation-delay: 480ms; }
+.anim-delay-7  { animation-delay: 560ms; }
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 38s linear infinite;
+}
+.animate-marquee:hover,
+.animate-marquee-reverse:hover { animation-play-state: paused; }
+
+/* ── Article prose ── */
+.article-prose h2 {
+  @apply font-playfair text-xl font-semibold text-neutral-900 mt-8 mb-3;
+}
+.article-prose p {
+  @apply text-base leading-relaxed text-neutral-700 mb-4;
+}
+.article-prose ul {
+  @apply list-disc list-inside space-y-2 text-neutral-700 mb-4 ml-2;
+}
+.article-prose .note-box {
+  @apply bg-brand-light border-l-4 border-brand-primary rounded-r-xl
+         px-4 py-3 text-sm text-brand-dark my-4;
+}
