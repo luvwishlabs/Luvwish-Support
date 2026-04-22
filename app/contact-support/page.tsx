@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ArrowLeft, Clock, Heart, Lock, Mail, Phone } from 'lucide-react'
-import { ContactForm } from '@/components/support/ContactForm'
 
 export const metadata = {
   title: 'Contact Support | Luvwish Help Center',
@@ -9,7 +8,7 @@ export const metadata = {
 
 export default function ContactSupportPage() {
   return (
-    <div className="bg-neutral-50 pb-16">
+    <div className="bg-neutral-50">
       {/* HERO SECTION */}
       <section className="pt-8 pb-20 bg-brand-primary px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center">
@@ -51,7 +50,16 @@ export default function ContactSupportPage() {
             <p className="text-neutral-500">Fill in the details below and we&apos;ll be in touch soon.</p>
           </div>
 
-          <ContactForm />
+          {/* TALLY EMBED */}
+          <div className="w-full rounded-2xl overflow-hidden" style={{ minHeight: 680 }}>
+            <iframe
+              src="https://tally.so/r/kdRR71?transparentBackground=1"
+              width="100%"
+              height="680"
+              title="Luvwish Support Request"
+              className="w-full border-0"
+            />
+          </div>
 
           <p className="text-xs text-neutral-400 text-center mt-6 flex items-center justify-center gap-1.5">
             <Lock className="w-3 h-3" />
@@ -61,7 +69,7 @@ export default function ContactSupportPage() {
       </section>
 
       {/* OTHER CONTACT METHODS */}
-      <section className="py-14 px-4 sm:px-6">
+      <section className="py-10 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-poppins text-2xl font-bold text-neutral-900 mb-8 text-center">
             Other Ways to Reach Us

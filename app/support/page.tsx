@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import { SearchBar } from '@/components/support/SearchBar'
 import { CategoryCard } from '@/components/support/CategoryCard'
-import { ReviewsScroll } from '@/components/support/ReviewsScroll'
-import { ProductsScroll } from '@/components/support/ProductsScroll'
 import { categories } from '@/data/categories'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
@@ -23,7 +21,7 @@ export default function SupportHome() {
     <div className="bg-white">
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-brand-primary min-h-[480px] flex items-center">
+      <section className="relative bg-brand-primary min-h-[480px] flex items-center">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
@@ -116,11 +114,11 @@ export default function SupportHome() {
         </div>
       </section>
 
-      {/* ── REVIEWS ── */}
-      <ReviewsScroll />
+      {/* ── REVIEWS ── hidden */}
+      {/* <ReviewsScroll /> */}
 
-      {/* ── PRODUCTS ── */}
-      <ProductsScroll />
+      {/* ── PRODUCTS ── hidden */}
+      {/* <ProductsScroll /> */}
 
       {/* ── POPULAR ARTICLES ── */}
       <section className="py-14 px-4 sm:px-6 bg-neutral-50">

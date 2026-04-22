@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { HeadphonesIcon } from 'lucide-react'
 
 export function Navbar() {
@@ -27,8 +28,15 @@ export function Navbar() {
 
           {/* Center: Logo */}
           <div className="shrink-0 mx-auto md:mx-0 md:absolute md:left-1/2 md:-translate-x-1/2">
-            <Link href="/support" className="font-poppins font-bold text-2xl text-brand-primary tracking-tight">
-              Luvwish
+            <Link href="/support">
+              <Image
+                src="/luv6.png"
+                alt="Luvwish"
+                width={280}
+                height={160}
+                className="h-30 w-auto rounded-2xl object-contain"
+                priority
+              />
             </Link>
           </div>
 
