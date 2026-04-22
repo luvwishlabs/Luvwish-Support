@@ -57,8 +57,8 @@ export function Footer() {
               <h4 className="font-semibold text-white mb-4">Policies</h4>
               <ul className="space-y-2.5 text-white/75">
                 <li><a href="https://luvwish.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Visit Store</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
+                <li><a href="https://www.luvwish.in/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="https://www.luvwish.in/policies/refund-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Refund Policy</a></li>
               </ul>
             </div>
           </div>
