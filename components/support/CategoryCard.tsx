@@ -8,25 +8,39 @@ export function CategoryCard({ category }: { category: Category }) {
   return (
     <Link
       href={`/support/${category.slug}`}
-      className="group flex items-center gap-5 bg-white border border-neutral-200 rounded-2xl px-6 py-5 hover:border-brand-primary/30 hover:bg-brand-light/40 hover:shadow-md transition-all duration-200"
+      className={`group relative flex flex-col justify-between ${category.bgColor} rounded-3xl p-5 min-h-[260px] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden`}
     >
-      {/* Icon */}
-      <div className="w-12 h-12 rounded-xl bg-brand-light text-brand-primary flex items-center justify-center shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-all duration-200">
-        <Icon className="w-5 h-5" />
+      {/* Top row: badge pills + circle indicator */}
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex gap-1.5 flex-wrap">
+          <span className="text-[11px] font-medium bg-white px-3 py-1 rounded-full text-neutral-600 shadow-sm">
+            {category.articleCount} articles
+          </span>
+          <span className="text-[11px] font-medium bg-white px-3 py-1 rounded-full text-neutral-600 shadow-sm">
+            Support
+          </span>
+        </div>
+        <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${category.circleColor}`}>
+          <Icon className="w-3.5 h-3.5 text-white" />
+        </div>
       </div>
 
-      {/* Text */}
-      <div className="flex-1 min-w-0">
-        <h3 className="font-semibold text-neutral-900 group-hover:text-brand-primary transition-colors mb-0.5">
+      {/* Title + description */}
+      <div className="mt-6 flex-1">
+        <h3 className="font-poppins font-black text-[22px] text-neutral-900 leading-tight tracking-tight mb-2.5">
           {category.title}
         </h3>
-        <p className="text-sm text-neutral-400 truncate">{category.description}</p>
+        <p className="text-sm text-neutral-500 leading-relaxed">
+          {category.description}
+        </p>
       </div>
 
-      {/* Right side */}
-      <div className="flex items-center gap-3 shrink-0">
-        <span className="hidden sm:block text-xs text-neutral-400 font-medium">{category.articleCount} articles</span>
-        <ArrowRight className="w-4 h-4 text-neutral-300 group-hover:text-brand-primary group-hover:translate-x-0.5 transition-all duration-200" />
+      {/* Bottom CTA */}
+      <div className="mt-8 flex items-center justify-between">
+        <span className="inline-flex items-center gap-2 bg-neutral-900 group-hover:bg-neutral-700 text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+          Read More
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+        </span>
       </div>
     </Link>
   )

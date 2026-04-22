@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowLeft, Clock, Heart, Lock, Mail, Phone } from 'lucide-react'
+import { ContactForm } from '@/components/support/ContactForm'
 
 export const metadata = {
   title: 'Contact Support | Luvwish Help Center',
@@ -21,7 +22,7 @@ export default function ContactSupportPage() {
             </Link>
           </div>
 
-          <h1 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="font-poppins text-4xl md:text-5xl font-bold text-white mb-4">
             Contact Support
           </h1>
           <p className="text-lg text-white/80 max-w-xl mx-auto mb-10">
@@ -46,20 +47,11 @@ export default function ContactSupportPage() {
       <section className="px-4 sm:px-6 -mt-10">
         <div className="max-w-3xl mx-auto bg-white rounded-3xl border border-neutral-200 shadow-lg p-4 sm:p-8">
           <div className="text-center mb-8">
-            <h2 className="font-playfair text-2xl font-bold text-neutral-900 mb-2">Submit a Request</h2>
+            <h2 className="font-poppins text-2xl font-bold text-neutral-900 mb-2">Submit a Request</h2>
             <p className="text-neutral-500">Fill in the details below and we&apos;ll be in touch soon.</p>
           </div>
 
-          {/* TALLY EMBED */}
-          <div className="w-full bg-neutral-50 rounded-2xl overflow-hidden min-h-150 relative border border-neutral-100">
-            <iframe
-              src="https://tally.so/r/kdRR71?transparentBackground=1"
-              width="100%"
-              height="700"
-              title="Luvwish Support Request"
-              className="absolute top-0 left-0 w-full h-full border-0"
-            />
-          </div>
+          <ContactForm />
 
           <p className="text-xs text-neutral-400 text-center mt-6 flex items-center justify-center gap-1.5">
             <Lock className="w-3 h-3" />
@@ -71,7 +63,7 @@ export default function ContactSupportPage() {
       {/* OTHER CONTACT METHODS */}
       <section className="py-14 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-playfair text-2xl font-bold text-neutral-900 mb-8 text-center">
+          <h2 className="font-poppins text-2xl font-bold text-neutral-900 mb-8 text-center">
             Other Ways to Reach Us
           </h2>
 

@@ -4,6 +4,7 @@ export interface Product {
   price: string
   originalPrice: string
   rating: number
+  badge?: string
   image: string
   shopifyUrl: string
 }

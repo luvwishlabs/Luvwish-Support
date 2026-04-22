@@ -62,7 +62,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <span className="inline-flex items-center bg-brand-light text-brand-primary rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider mb-4">
                 {category.title}
               </span>
-              <h1 className="font-playfair text-3xl md:text-4xl font-bold text-neutral-900 leading-tight mb-3">
+              <h1 className="font-poppins text-3xl md:text-4xl font-bold text-neutral-900 leading-tight mb-3">
                 {article.title}
               </h1>
               <p className="text-sm text-neutral-400">Updated {article.updatedAt}</p>

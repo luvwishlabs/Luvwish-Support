@@ -18,7 +18,12 @@ export function SearchResults({ query, results, onClose }: SearchResultsProps) {
           <Link
             key={article.slug}
             href={`/support/article/${article.slug}`}
-            onClick={onClose}
+            onClick={() => {
+              if (document.activeElement instanceof HTMLElement) {
+                document.activeElement.blur()
+              }
+              onClose()
+            }}
             className="block px-4 py-3 hover:bg-neutral-50 border-b border-neutral-100 last:border-0 transition-colors"
           >
             <div className="flex items-start gap-3">

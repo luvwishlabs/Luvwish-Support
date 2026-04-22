@@ -6,7 +6,7 @@ export function Navbar() {
     <>
       {/* Announcement bar — matches luvwish.in top strip */}
       <div className="bg-brand-primary text-white text-center text-xs sm:text-sm font-medium py-2.5 px-4">
-        🛵 Need help with your order? We&apos;re here for you - reach out anytime!
+        Need help with your order? We&apos;re here for you — reach out anytime!
       </div>
 
       <nav className="sticky top-0 z-50 bg-white border-b border-neutral-200 shadow-sm">
@@ -27,7 +27,7 @@ export function Navbar() {
 
           {/* Center: Logo */}
           <div className="shrink-0 mx-auto md:mx-0 md:absolute md:left-1/2 md:-translate-x-1/2">
-            <Link href="/support" className="font-playfair font-bold text-2xl text-brand-primary tracking-tight">
+            <Link href="/support" className="font-poppins font-bold text-2xl text-brand-primary tracking-tight">
               Luvwish
             </Link>
           </div>

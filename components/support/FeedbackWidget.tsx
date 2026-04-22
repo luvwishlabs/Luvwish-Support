@@ -12,7 +12,7 @@ export function FeedbackWidget() {
   return (
     <div className="mt-12 pt-8 border-t border-neutral-200">
       <div className={`transition-all duration-300 ease-in-out overflow-hidden ${state === 'idle' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <h3 className="font-inter text-lg font-semibold text-neutral-900 mb-4">
+        <h3 className="font-poppins text-lg font-semibold text-neutral-900 mb-4">
           Was this article helpful?
         </h3>
         <div className="flex items-center gap-4">

@@ -12,7 +12,7 @@ export function Footer() {
           {/* Brand block */}
           <div>
             <p className="text-white/70 text-xs font-semibold uppercase tracking-widest mb-3">Help Customers</p>
-            <div className="font-playfair text-5xl font-bold text-white mb-5">Luvwish</div>
+            <div className="font-poppins text-5xl font-bold text-white mb-5">Luvwish</div>
             <div className="space-y-1.5 text-sm text-white/80 mb-5">
               <a href="tel:+919061064554" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" /> +91 90610 64554

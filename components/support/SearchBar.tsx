@@ -18,10 +18,19 @@ export function SearchBar({ autoFocus = false }: SearchBarProps) {
 
   const results = searchArticles(query, articles)
 
-  // Auto-focus on mount
+  // Auto-focus on mount — defer so the element is guaranteed in DOM
   useEffect(() => {
-    if (autoFocus && inputRef.current) {
-      inputRef.current.focus()
+    if (!autoFocus) return
+    const id = setTimeout(() => {
+      inputRef.current?.focus()
+    }, 50)
+    return () => {
+      clearTimeout(id)
+      // Blur on unmount so Next.js router doesn't try to dispatch on a detached element
+      if (document.activeElement instanceof HTMLElement &&
+          document.activeElement === inputRef.current) {
+        document.activeElement.blur()
+      }
     }
   }, [autoFocus])
 

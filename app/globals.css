@@ -18,8 +18,12 @@
   --color-neutral-700: #4A3228;
   --color-neutral-900: #1A0A06;
 
-  --font-inter: var(--font-inter);
-  --font-playfair: var(--font-playfair);
+  --font-poppins: var(--font-poppins);
+  /* All font utilities resolve to Poppins to match luvwish.in brand */
+  --font-jakarta: var(--font-poppins);
+  --font-cormorant: var(--font-poppins);
+  --font-inter: var(--font-poppins);
+  --font-playfair: var(--font-poppins);
 }
 
 /* ── Page load animations ── */

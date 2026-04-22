@@ -56,22 +56,22 @@ const row2 = [
 
 function ReviewCard({ review }: { review: typeof row1[0] }) {
   return (
-    <div className="inline-flex flex-col bg-white rounded-2xl p-6 w-72 shrink-0 mx-2.5 shadow-sm">
+    <div className="inline-flex flex-col bg-white/10 backdrop-blur-sm rounded-2xl p-5 w-68 shrink-0 mx-2.5 border border-white/20">
       <div className="flex gap-0.5 mb-3">
         {Array.from({ length: 5 }).map((_, s) => (
-          <Star key={s} className="w-4 h-4 fill-amber-400 text-amber-400" />
+          <Star key={s} className="w-3.5 h-3.5 fill-amber-300 text-amber-300" />
         ))}
       </div>
-      <p className="text-neutral-700 text-sm leading-relaxed mb-5 flex-1">
+      <p className="text-white/90 text-sm leading-relaxed mb-4 flex-1">
         &ldquo;{review.text}&rdquo;
       </p>
-      <div className="flex items-center gap-3 pt-4 border-t border-neutral-100">
-        <div className="w-9 h-9 rounded-full bg-brand-light text-brand-primary flex items-center justify-center font-bold text-sm shrink-0">
+      <div className="flex items-center gap-2.5">
+        <div className="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center font-semibold text-xs shrink-0">
           {review.name[0]}
         </div>
         <div>
-          <p className="font-semibold text-neutral-900 text-sm">{review.name}</p>
-          <p className="text-neutral-400 text-xs">{review.location} · {review.product}</p>
+          <p className="font-medium text-white text-xs">{review.name}</p>
+          <p className="text-white/50 text-xs">{review.location}</p>
         </div>
       </div>
     </div>
@@ -80,24 +80,19 @@ function ReviewCard({ review }: { review: typeof row1[0] }) {
 
 export function ReviewsScroll() {
   return (
-    <section className="py-20 bg-brand-primary overflow-hidden">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center mb-12">
-        <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-3">
-          Customer Love
-        </p>
-        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white">
-          Loved by women across India
+    <section className="py-16 bg-brand-primary overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-10">
+        <h2 className="font-poppins text-3xl md:text-4xl font-bold text-white">
+          Real stories from<br className="hidden sm:block" /> real customers
         </h2>
       </div>
 
-      {/* Row 1 — scrolls left */}
-      <div className="animate-marquee mb-5">
+      <div className="animate-marquee mb-4">
         {[...row1, ...row1].map((review, i) => (
           <ReviewCard key={i} review={review} />
         ))}
       </div>
 
-      {/* Row 2 — scrolls right */}
       <div className="animate-marquee-reverse">
         {[...row2, ...row2].map((review, i) => (
           <ReviewCard key={i} review={review} />
